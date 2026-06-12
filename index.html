@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Front Crawl Troubleshooting Guide — Sinking Legs, Breathing, Fatigue</title>
+<style>
+  :root {
+    --ink: #1a2b3c;
+    --water: #0b6e99;
+    --water-light: #e8f4f9;
+    --accent: #e07a2f;
+    --accent-light: #fdf1e7;
+    --ok: #2e7d52;
+    --ok-light: #e9f5ee;
+    --bad: #b03a3a;
+    --bad-light: #faecec;
+    --rule: #d5e3ec;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    line-height: 1.6;
+    background: #f7fafc;
+  }
+  header {
+    background: linear-gradient(160deg, #0b6e99 0%, #094d6b 100%);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
+  }
+  header h1 { margin: 0 0 .5rem; font-size: 1.9rem; letter-spacing: -.02em; }
+  header p { margin: 0 auto; max-width: 42rem; opacity: .92; }
+  nav {
+    background: #fff;
+    border-bottom: 1px solid var(--rule);
+    padding: .6rem 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav a {
+    color: var(--water);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .9rem;
+    margin: 0 .7rem;
+    white-space: nowrap;
+  }
+  nav a:hover { text-decoration: underline; }
+  main { max-width: 46rem; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+  h2 {
+    color: var(--water);
+    font-size: 1.45rem;
+    margin-top: 3rem;
+    padding-bottom: .35rem;
+    border-bottom: 2px solid var(--rule);
+  }
+  h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+  .lead { font-size: 1.05rem; }
+  .keypoint {
+    background: var(--water-light);
+    border-left: 4px solid var(--water);
+    padding: .9rem 1.1rem;
+    margin: 1.2rem 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .keypoint strong:first-child { color: var(--water); }
+  .insight {
+    background: var(--accent-light);
+    border-left: 4px solid var(--accent);
+    padding: .9rem 1.1rem;
+    margin: 1.2rem 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .insight strong:first-child { color: var(--accent); }
+  .drill {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+  }
+  .drill h4 { margin: 0 0 .4rem; color: var(--water); font-size: 1rem; }
+  .drill .goal { font-size: .85rem; color: #5a6b7a; font-style: italic; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0;
+    font-size: .92rem;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  th, td { padding: .6rem .8rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--rule); }
+  th { background: var(--water-light); color: var(--water); }
+  tr:last-child td { border-bottom: none; }
+  .wrong { color: var(--bad); font-weight: 600; }
+  .right { color: var(--ok); font-weight: 600; }
+  figure { margin: 1.5rem 0; text-align: center; }
+  figure svg { max-width: 100%; height: auto; background: #fff; border: 1px solid var(--rule); border-radius: 10px; }
+  figcaption { font-size: .85rem; color: #5a6b7a; margin-top: .5rem; }
+  .checklist {
+    background: var(--ok-light);
+    border: 1px solid #bcdccb;
+    border-radius: 10px;
+    padding: 1.2rem 1.4rem;
+    margin: 1.5rem 0;
+  }
+  .checklist h3 { margin-top: 0; color: var(--ok); }
+  .checklist ul { margin: 0; padding-left: 1.3rem; }
+  .checklist li { margin: .35rem 0; }
+  code.cue {
+    background: var(--water-light);
+    color: var(--water);
+    padding: .1rem .45rem;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: 600;
+    font-style: italic;
+  }
+  footer { text-align: center; color: #8294a3; font-size: .85rem; padding: 2rem 1rem; }
+  @media print {
+    nav { display: none; }
+    header { background: #fff; color: var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Front Crawl Troubleshooting Guide</h1>
+  <p>Fixing sinking legs, mouthfuls of water, and early exhaustion — and why all three are actually the <em>same</em> problem.</p>
+</header>
+
+<nav>
+  <a href="#one-problem">The One Problem</a>
+  <a href="#legs">1 · Sinking Legs</a>
+  <a href="#breathing">2 · Breathing</a>
+  <a href="#fatigue">3 · Fatigue</a>
+  <a href="#plan">Practice Plan</a>
+  <a href="#checklist">Checklist</a>
+</nav>
+
+<main>
+
+<!-- ============================================================ -->
+<h2 id="one-problem">Your three issues are one issue</h2>
+
+<p class="lead">It's worth seeing this before drilling into each problem, because it tells you where to spend your effort.</p>
+
+<p>Here's the chain:</p>
+
+<ol>
+  <li><strong>Your legs sink</strong> → your body is tilted diagonally in the water, like a plow.</li>
+  <li><strong>A plow has enormous drag</strong> → you need much more power just to move, so your arms and legs work overtime → <em>fatigue</em>.</li>
+  <li><strong>A tilted, struggling body has no stable platform to breathe from</strong> → your mouth is lower in the water, the bow wave pocket never forms properly, you rush and gulp → <em>mouthfuls of water</em>.</li>
+  <li><strong>Bad breathing means oxygen debt</strong> → you tense up and kick harder to compensate → tense, heavy legs sink even more → back to step 1, worse.</li>
+</ol>
+
+<div class="keypoint">
+  <strong>What this means for practice:</strong> Body position is upstream of everything. Most of your fatigue is not weak muscles — it's the cost of dragging a diagonal body through water plus the panic of oxygen debt. Fix the balance first, then breathing becomes mechanically possible, then fatigue largely solves itself. Resist the urge to "train harder" — train <em>flatter</em>.
+</div>
+
+<!-- ============================================================ -->
+<h2 id="legs">Issue 1: Why your legs sink even with a level head</h2>
+
+<p>You've correctly learned that looking down keeps the spine aligned and that lifting the chin sinks the legs. But head position is <strong>necessary, not sufficient</strong>. Here's the missing physics.</p>
+
+<h3>Your lungs are a buoy. Your legs are an anchor.</h3>
+
+<p>Your chest contains several liters of air — it floats powerfully. Your legs are dense muscle and bone — they sink, in basically everyone (lean men especially). Your body is a seesaw pivoting around your lungs:</p>
+
+<figure>
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, sans-serif">
+  <!-- TOP PANEL: tilted body -->
+  <rect x="0" y="0" width="640" height="175" fill="#ffffff"/>
+  <text x="16" y="26" font-size="14" font-weight="700" fill="#b03a3a">✗ Leaning on the legs (what's happening now)</text>
+  <line x1="20" y1="70" x2="620" y2="70" stroke="#7db9d4" stroke-width="2"/>
+  <path d="M20 70 Q 50 64 80 70 T 140 70 T 200 70 T 260 70 T 320 70 T 380 70 T 440 70 T 500 70 T 560 70 T 620 70" fill="none" stroke="#7db9d4" stroke-width="2"/>
+  <rect x="20" y="71" width="600" height="95" fill="#d6ecf5"/>
+  <!-- tilted swimmer: head left at surface, legs down-right -->
+  <g stroke="#1a2b3c" stroke-width="6" stroke-linecap="round" fill="none">
+    <line x1="140" y1="72" x2="330" y2="105"/>   <!-- torso -->
+    <line x1="330" y1="105" x2="470" y2="148"/>  <!-- legs sinking -->
+    <line x1="140" y1="72" x2="60" y2="66"/>     <!-- extended arm -->
+  </g>
+  <circle cx="150" cy="68" r="14" fill="#1a2b3c"/> <!-- head -->
+  <!-- buoyancy arrow at chest -->
+  <g stroke="#0b6e99" stroke-width="3" fill="#0b6e99">
+    <line x1="210" y1="110" x2="210" y2="82"/>
+    <polygon points="210,76 204,88 216,88"/>
+  </g>
+  <text x="222" y="108" font-size="12" fill="#0b6e99" font-weight="600">lungs push UP</text>
+  <!-- sink arrow at legs -->
+  <g stroke="#b03a3a" stroke-width="3" fill="#b03a3a">
+    <line x1="450" y1="118" x2="450" y2="146"/>
+    <polygon points="450,152 444,140 456,140"/>
+  </g>
+  <text x="462" y="138" font-size="12" fill="#b03a3a" font-weight="600">legs pull DOWN</text>
+
+  <!-- BOTTOM PANEL: pressed chest, level body -->
+  <rect x="0" y="185" width="640" height="175" fill="#ffffff"/>
+  <text x="16" y="211" font-size="14" font-weight="700" fill="#2e7d52">✓ Pressing the buoy: lean on your chest, the legs rise</text>
+  <path d="M20 255 Q 50 249 80 255 T 140 255 T 200 255 T 260 255 T 320 255 T 380 255 T 440 255 T 500 255 T 560 255 T 620 255" fill="none" stroke="#7db9d4" stroke-width="2"/>
+  <rect x="20" y="256" width="600" height="95" fill="#d6ecf5"/>
+  <!-- level swimmer, chest slightly pressed -->
+  <g stroke="#1a2b3c" stroke-width="6" stroke-linecap="round" fill="none">
+    <line x1="150" y1="262" x2="330" y2="260"/>  <!-- torso, chest a touch deeper -->
+    <line x1="330" y1="260" x2="475" y2="256"/>  <!-- legs at surface -->
+    <line x1="150" y1="262" x2="65" y2="254"/>   <!-- extended arm -->
+  </g>
+  <circle cx="158" cy="258" r="14" fill="#1a2b3c"/>
+  <!-- press arrow on chest -->
+  <g stroke="#e07a2f" stroke-width="3" fill="#e07a2f">
+    <line x1="225" y1="225" x2="225" y2="250"/>
+    <polygon points="225,256 219,244 231,244"/>
+  </g>
+  <text x="237" y="237" font-size="12" fill="#e07a2f" font-weight="600">YOU press chest down</text>
+  <!-- legs rise arrow -->
+  <g stroke="#2e7d52" stroke-width="3" fill="#2e7d52">
+    <line x1="460" y1="290" x2="460" y2="266"/>
+    <polygon points="460,260 454,272 466,272"/>
+  </g>
+  <text x="472" y="284" font-size="12" fill="#2e7d52" font-weight="600">legs rise (seesaw)</text>
+</svg>
+<figcaption>The body pivots around the lungs like a seesaw. Pressing the floaty end (chest) down levers the sinky end (legs) up — no extra kicking required.</figcaption>
+</figure>
+
+<p>This is the classic <strong>"press the buoy"</strong> concept (from Total Immersion, but every school teaches some version). If you float passively with a level head and do nothing else, your legs <em>will</em> still sink — that's just your density distribution. You have to actively <strong>lean on your chest</strong>: a constant, gentle downward pressure on your sternum, as if someone's hand were pushing between your shoulder blades. Because water pushes back on your buoyant chest, the seesaw tips and your hips and legs ride up.</p>
+
+<div class="insight">
+  <strong>The feeling to chase:</strong> swimming slightly "downhill." It feels wrong at first — like you'll dive to the bottom. You won't; your lungs won't let you. When you get it, your hips suddenly feel light and the backs of your legs break the surface. Cue: <code class="cue">swim downhill</code> or <code class="cue">lean on your lungs</code>.
+</div>
+
+<h3>The other three leg-sinkers to check</h3>
+
+<table>
+  <tr><th>Cause</th><th>What's going on</th><th>Fix / cue</th></tr>
+  <tr>
+    <td><strong>Soft core</strong></td>
+    <td>If your midsection is relaxed, your body bends at the waist like a banana and the legs droop, regardless of head position.</td>
+    <td>Lightly brace your abs and glutes the whole time — about 30% effort, like a gentle plank. Cue: <code class="cue">long and firm, like a kayak, not a banana</code>.</td>
+  </tr>
+  <tr>
+    <td><strong>Floppy or hooked ankles</strong></td>
+    <td>Kicking with flexed feet (toes toward your shin) is like kicking with anchors on — it pushes water forward and drags your legs down. Very common in adult learners, especially runners and cyclists with stiff ankles.</td>
+    <td>Point your toes (plantar-flex) so the top of your foot pushes water backward. Floppy, loose ankles — let the water flick the foot. Cue: <code class="cue">ballerina toes</code>. Short fins for drills are a legitimate learning aid here.</td>
+  </tr>
+  <tr>
+    <td><strong>Kicking from the knee</strong></td>
+    <td>A knee-driven "bicycle" kick drops the thighs deep and creates drag instead of lift. You know to kick from the hip — but check that the knees stay nearly straight with only a soft, whip-like bend.</td>
+    <td>Small, fast, narrow kicks that stay inside the "shadow" of your body. Splashing the surface lightly with your heels is a good sign. Cue: <code class="cue">kick from the hip, boil the water, don't splash the ceiling</code>.</td>
+  </tr>
+</table>
+
+<div class="keypoint">
+  <strong>Important reframe:</strong> the kick's job at your stage is <em>not</em> propulsion — it's to keep the legs up and balance the stroke. A light, steady flutter is enough <em>if</em> you're pressing your chest. If you're kicking furiously to keep your legs afloat, you're using the kick to fight a balance problem, and that's exactly what's exhausting you (see Issue 3).</td>
+</div>
+
+<h3>Balance drills (do these before anything else)</h3>
+
+<div class="drill">
+  <h4>Drill A — Superman glide</h4>
+  <p class="goal">Goal: feel what a balanced, level body actually feels like, with zero stroke to distract you.</p>
+  <p>Push off the wall underwater, arms extended, face down, eyes at the pool bottom, body firm. <strong>No kicking, no stroking.</strong> Glide and notice when your legs start to drop. Then repeat, this time pressing your chest down as you glide. You should feel your hips stay up noticeably longer. 8–10 repeats. This drill is boring and it is the highest-value thing you can do right now.</p>
+</div>
+
+<div class="drill">
+  <h4>Drill B — Glide + gentle kick</h4>
+  <p class="goal">Goal: add the kick without losing the balance.</p>
+  <p>Same as Drill A, but after the glide slows, start a small, soft flutter kick from the hips, toes pointed. Keep pressing the chest. Stop the moment you feel your hips drop, stand up, reset. Quality over distance — 15 meters done level beats 50 meters done diagonal.</p>
+</div>
+
+<div class="drill">
+  <h4>Drill C — Kick on your side</h4>
+  <p class="goal">Goal: balance in the rotated position you'll actually breathe from.</p>
+  <p>One arm extended forward (underwater, fingertips slightly below the wrist), the other arm resting on your hip. Rotate your body ~45° toward the resting-arm side, face looking <em>down</em>, gentle flutter kick. When you need air, rotate your head (not your body) to breathe, then return your face to the water. This is the skeleton of the freestyle breathing position. Fins allowed and encouraged at first.</p>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="breathing">Issue 2: Breathing — and what that YouTube comment actually means</h2>
+
+<p>You already have the most important piece: <strong>exhale fully underwater so the breath window is inhale-only</strong>. Keep doing that — a steady trickle out of the nose/mouth the whole time your face is down, finishing with a stronger puff just as you turn. If you're holding your breath at all, the CO₂ buildup alone will make you feel desperate by cycle 4 — which matches your symptom exactly.</p>
+
+<p>So why the mouthfuls of water? Two reasons: <strong>where the air actually is</strong>, and <strong>how you're aiming your mouth at it</strong>.</p>
+
+<h3>The bow wave and the trough</h3>
+
+<p>As you move forward, your head pushes water aside like the bow of a boat. This creates a <strong>bow wave</strong> in front of and beside your head — and immediately behind that wave, next to your cheek and jaw, the water surface <em>dips below the normal waterline</em>. That dip is the <strong>trough</strong>, the famous "air pocket." It means you can inhale with your mouth <em>lower than the actual surface of the pool</em> — but only if your mouth opens into the trough, and only if you're moving forward with a level body (no forward motion = no bow wave = no pocket; sinking legs = head plowing low = pocket drowned).</p>
+
+<h3>Decoding the comment: "turn your chin to your shoulder"</h3>
+
+<p>Here is what that commenter figured out, translated.</p>
+
+<p>Most learners, when they "rotate to breathe," do this: they rotate the body, then <strong>tilt the face straight up toward the ceiling</strong>, so the mouth points vertically at the sky — perpendicular to the body, as the commenter puts it. Two bad things happen:</p>
+
+<ul>
+  <li>Tilting the face up is a disguised version of <em>lifting the head</em> — it pulls the head out of alignment with the spine, which (as you know) drops your legs at the worst possible moment.</li>
+  <li>A sky-facing mouth sits at the <em>top</em> of the head's rotation, right where the bow wave crests and washes over. You're aiming your mouth at the wave, not the trough.</li>
+</ul>
+
+<p>The fix: instead of tilting the face upward, <strong>rotate the head around the spine's axis and tuck the chin slightly toward the shoulder of the breathing side</strong> (the side whose arm is recovering over the water). Now the mouth points sideways-and-slightly-back, at roughly 45° toward your shoulder rather than straight up. That orientation drops your mouth directly into the trough behind the bow wave — the spot beside your cheek where the water has dipped away.</p>
+
+<figure>
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, sans-serif">
+  <!-- LEFT PANEL: wrong, mouth to sky -->
+  <rect x="0" y="0" width="320" height="400" fill="#ffffff"/>
+  <text x="16" y="28" font-size="14" font-weight="700" fill="#b03a3a">✗ Mouth points at the sky</text>
+  <text x="16" y="46" font-size="12" fill="#5a6b7a">(face tilted up = head lift in disguise)</text>
+  <!-- water surface with bow wave crest near head -->
+  <path d="M10 200 Q 60 195 100 200 Q 130 175 165 172 Q 200 175 225 200 Q 270 206 310 200" fill="none" stroke="#7db9d4" stroke-width="2.5"/>
+  <path d="M10 201 Q 60 196 100 201 Q 130 176 165 173 Q 200 176 225 201 Q 270 207 310 201 L 310 390 L 10 390 Z" fill="#d6ecf5"/>
+  <!-- head seen from front, rotated, face up -->
+  <ellipse cx="163" cy="205" rx="34" ry="38" fill="#1a2b3c"/>
+  <!-- mouth pointing straight up, underwater of crest -->
+  <circle cx="163" cy="172" r="7" fill="#b03a3a"/>
+  <text x="120" y="120" font-size="12" fill="#b03a3a" font-weight="600">mouth at the crest —</text>
+  <text x="120" y="136" font-size="12" fill="#b03a3a" font-weight="600">wave washes in</text>
+  <line x1="163" y1="142" x2="163" y2="163" stroke="#b03a3a" stroke-width="2"/>
+  <!-- shoulder line -->
+  <line x1="60" y1="245" x2="266" y2="245" stroke="#1a2b3c" stroke-width="9" stroke-linecap="round"/>
+  <text x="40" y="300" font-size="12" fill="#5a6b7a">Mouth is perpendicular (90°)</text>
+  <text x="40" y="316" font-size="12" fill="#5a6b7a">to the body line — exactly</text>
+  <text x="40" y="332" font-size="12" fill="#5a6b7a">where the bow wave breaks.</text>
+
+  <!-- divider -->
+  <line x1="320" y1="10" x2="320" y2="390" stroke="#d5e3ec" stroke-width="2"/>
+
+  <!-- RIGHT PANEL: correct, chin to shoulder -->
+  <rect x="320" y="0" width="320" height="400" fill="#ffffff"/>
+  <text x="336" y="28" font-size="14" font-weight="700" fill="#2e7d52">✓ Chin turned toward shoulder</text>
+  <text x="336" y="46" font-size="12" fill="#5a6b7a">(mouth ~45° to the body, into the trough)</text>
+  <!-- water surface with bow wave crest AND trough beside head -->
+  <path d="M330 200 Q 380 195 420 198 Q 450 178 470 176 Q 492 178 502 196 Q 514 216 540 214 Q 580 210 630 202" fill="none" stroke="#7db9d4" stroke-width="2.5"/>
+  <path d="M330 201 Q 380 196 420 199 Q 450 179 470 177 Q 492 179 502 197 Q 514 217 540 215 Q 580 211 630 203 L 630 390 L 330 390 Z" fill="#d6ecf5"/>
+  <!-- head rotated, chin tucked toward shoulder -->
+  <ellipse cx="470" cy="208" rx="34" ry="38" fill="#1a2b3c" transform="rotate(-18 470 208)"/>
+  <!-- mouth at 45 deg, sitting in the trough below normal waterline -->
+  <circle cx="512" cy="206" r="7" fill="#2e7d52"/>
+  <text x="500" y="110" font-size="12" fill="#2e7d52" font-weight="600">mouth opens into</text>
+  <text x="500" y="126" font-size="12" fill="#2e7d52" font-weight="600">the trough — below</text>
+  <text x="500" y="142" font-size="12" fill="#2e7d52" font-weight="600">the waterline, in air</text>
+  <line x1="516" y1="150" x2="513" y2="196" stroke="#2e7d52" stroke-width="2"/>
+  <!-- trough label -->
+  <text x="336" y="246" font-size="11" fill="#0b6e99" font-weight="600">bow wave crest ↑</text>
+  <!-- shoulder line -->
+  <line x1="380" y1="252" x2="586" y2="252" stroke="#1a2b3c" stroke-width="9" stroke-linecap="round"/>
+  <!-- 45 deg indicator -->
+  <text x="360" y="300" font-size="12" fill="#5a6b7a">Head rotated on the spine's</text>
+  <text x="360" y="316" font-size="12" fill="#5a6b7a">axis, chin toward shoulder.</text>
+  <text x="360" y="332" font-size="12" fill="#5a6b7a">One goggle stays underwater.</text>
+</svg>
+<figcaption>View from the front as the swimmer moves toward you, breathing to their side. Left: face tilted skyward puts the mouth where the bow wave crests. Right: chin rotated toward the shoulder drops the mouth into the trough — the "air pocket" — which sits <em>below</em> the still-water line.</figcaption>
+</figure>
+
+<div class="insight">
+  <strong>The whole comment in one sentence:</strong> the air pocket is not <em>above</em> your face, it's <em>beside and slightly behind</em> it — so don't point your mouth at the sky (90° to your body); rotate your head so the chin moves toward your shoulder and the mouth aims ~45° back toward it. And the commenter's caveat matters: this only works <em>after</em> the body position is fixed, because the trough only exists when you're moving level through the water.
+</div>
+
+<h3>How to know you're doing it right</h3>
+
+<ul>
+  <li><strong>One goggle stays in the water.</strong> If both goggles clear the surface, you've over-rotated or lifted. You should see half sky, half water — "split vision."</li>
+  <li><strong>You're looking sideways/slightly behind you</strong>, roughly toward your armpit or the lane rope — not at the ceiling, not toward where you're going.</li>
+  <li><strong>Your head turns with your body's roll, then a touch more.</strong> The body rotation (which you do on every stroke anyway) does 80% of the work; the chin-to-shoulder turn is the last 20%. Breathing is a head <em>rotation</em>, never a head <em>lift</em>.</li>
+  <li><strong>The breath is quick.</strong> Mouth opens in the trough, one sharp inhale ("sip the air, don't gulp it"), face back down before the recovering arm's hand enters the water.</li>
+</ul>
+
+<h3>Common breathing faults</h3>
+
+<table>
+  <tr><th>Symptom</th><th>Likely cause</th><th>Fix</th></tr>
+  <tr>
+    <td>Mouthful of water every breath</td>
+    <td>Mouth aimed at the crest (face tilted up), or no bow wave because legs are dragging</td>
+    <td>Chin-to-shoulder rotation; fix balance first (Issue 1)</td>
+  </tr>
+  <tr>
+    <td>Out of breath by cycle 4</td>
+    <td>Incomplete exhale — you think you're exhaling but a reserve of stale air remains; CO₂ panic, not lack of O₂</td>
+    <td>Exaggerate the exhale: hum or "sing" bubbles continuously, finish with a forceful puff right before turning</td>
+  </tr>
+  <tr>
+    <td>Body stalls/sinks during the breath</td>
+    <td>Lead arm drops or pulls early while you breathe, removing your front "outrigger"</td>
+    <td>Keep the lead arm extended and patient until the breath is done — cue: <code class="cue">breathe on a full tank, arm out front</code></td>
+  </tr>
+  <tr>
+    <td>Twisting/snaking down the lane</td>
+    <td>Over-rotating the whole body to find air instead of rotating the head</td>
+    <td>Drill C (side-kick breathing); rotate head independently of body</td>
+  </tr>
+</table>
+
+<h3>Breathing drills</h3>
+
+<div class="drill">
+  <h4>Drill D — Sink-down bobs (do these in the shallow end, even before swimming)</h4>
+  <p class="goal">Goal: make full exhalation automatic and kill breath-holding panic.</p>
+  <p>Stand in chest-deep water. Inhale through your mouth, sink/squat under, and exhale a slow, continuous stream of bubbles until your lungs are genuinely <em>empty</em> — it takes longer than you think, 4–6 seconds. Surface, one quick inhale, repeat. Do 20. The rhythm you're building — long relaxed exhale, instant snap inhale — is exactly the swimming rhythm.</p>
+</div>
+
+<div class="drill">
+  <h4>Drill E — Side-kick with chin-to-shoulder breath</h4>
+  <p class="goal">Goal: rehearse the exact head movement in isolation.</p>
+  <p>Drill C position (one arm forward, on your side at ~45°, face down, gentle kick). Exhale steadily. When empty, rotate <em>only your head</em>, chin toward the top shoulder, until your mouth clears into air — one goggle still wet — inhale, return face down. Stay in this position for a full pool length, breathing every 3–4 seconds. Fins make this drill dramatically easier to learn; use them.</p>
+</div>
+
+<div class="drill">
+  <h4>Drill F — Whole-stroke, breathe every 2, exhale loudly</h4>
+  <p class="goal">Goal: integrate it into real swimming with maximum air supply.</p>
+  <p>Swim normal freestyle but breathe every 2 strokes (every cycle, same side) — forget "every 3 / alternate sides" for now; that's a styling refinement for later, and right now it's just starving you of air. Hum out loud underwater so you can <em>hear</em> that your exhale is continuous. Swim 15–25m, rest fully, repeat. Stop each rep before your form falls apart.</p>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="fatigue">Issue 3: Why you're exhausted (it's not fitness)</h2>
+
+<p>A fit person who runs or bikes can still be wrecked by 25 meters of freestyle. That's normal, and it's diagnostic: <strong>your exhaustion is an efficiency problem, not a conditioning problem.</strong> Three leaks, in order of size:</p>
+
+<h3>Leak 1: Drag from the diagonal body (the big one)</h3>
+<p>Drag rises roughly with the <em>square</em> of speed and balloons with frontal area. A swimmer with dragging legs presents several times the frontal area of a level swimmer. You are likely spending well over half your energy just paying the drag tax. Every balance fix from Issue 1 is therefore also a fatigue fix — this is why the guide keeps pointing you back there.</p>
+
+<h3>Leak 2: The survival kick</h3>
+<p>Kicking is the most oxygen-hungry thing you can do in the water — the legs are huge muscles working far from the lungs, and the flutter kick contributes maybe 10% of propulsion for most adult swimmers. If you're kicking hard to hold your sinking legs up, you're burning your biggest fuel reserve on a job that chest-pressing does for free. Once balance improves, deliberately downshift to a <strong>light, narrow, almost lazy flutter</strong> — just enough to keep the legs in your body's shadow. Your heart rate will drop immediately.</p>
+
+<h3>Leak 3: Arm spin without traction</h3>
+<p>You know the phrase "high elbow," so here's just the practical version of it. The point of the high elbow is to make your forearm + palm into one big paddle that pushes water <em>backward</em>:</p>
+
+<ul>
+  <li>After your hand enters and extends, <strong>tip your fingertips down and keep your elbow high and wide</strong>, near the surface — like reaching over a barrel or a fallen log in front of you.</li>
+  <li>Then press the whole forearm-paddle <em>back</em> toward your feet, past your hip. Water pushed backward moves you forward; water pushed downward only lifts your front and sinks your legs (another hidden leg-sinker!).</li>
+  <li>A straight-arm pull that slips downward feels powerful but moves mostly water, not you — that's why your arms burn without much to show for it.</li>
+</ul>
+
+<div class="keypoint">
+  <strong>Slow down to speed up.</strong> The single best anti-fatigue instruction: take <em>fewer, longer, more patient strokes</em>. Glide a beat with each extended arm. Count your strokes per length and try to lower the count, not raise the turnover. Rushed strokes slip; patient strokes grip.
+</div>
+
+<h3>Effort-management rules for your current stage</h3>
+<ul>
+  <li><strong>Swim short and rest honestly.</strong> 15–25m repeats with 30–60s rest, focusing on one cue per repeat. Continuous laps with collapsing form just rehearse the collapse.</li>
+  <li><strong>One cue at a time.</strong> "Press chest" for one length. "Ballerina toes" the next. "Chin to shoulder" the next. The brain can't hold five cues mid-swim.</li>
+  <li><strong>Stay loose.</strong> Tension is dense and sinks; tension also burns oxygen. Soft hands, relaxed recovery arm (the elbow leads, the forearm dangles), loose ankles.</li>
+  <li><strong>Stop each repeat while form is still good.</strong> That's the rep doing its job.</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2 id="plan">A practice progression</h2>
+
+<p>Each session ~30–45 minutes. Move to the next stage when the current one feels easy, not after a fixed number of visits. Fins are a learning tool, not cheating — they let you hold good positions long enough for your nervous system to memorize them; wean off them gradually.</p>
+
+<table>
+  <tr><th>Stage</th><th>Session core</th><th>You've got it when…</th></tr>
+  <tr>
+    <td><strong>1. Balance</strong></td>
+    <td>Sink-down bobs (Drill D) ×20 · Superman glides (A) ×10 · Glide + gentle kick (B) ×8 · Side-kick, no breathing focus yet (C, with fins)</td>
+    <td>You can glide and kick 15m with hips at the surface and no sense of fighting</td>
+  </tr>
+  <tr>
+    <td><strong>2. Breathing position</strong></td>
+    <td>Bobs ×10 as warm-up · Side-kick with chin-to-shoulder breaths (E) ×6 lengths · Finish with 2–4 lengths easy whole-stroke, breathing every 2 (F)</td>
+    <td>You can side-kick a full length taking 6+ calm breaths, one goggle wet, no water swallowed</td>
+  </tr>
+  <tr>
+    <td><strong>3. Integration</strong></td>
+    <td>Short warm-up of A/E · Whole-stroke 25s with full rest, one cue per length, breathing every 2 · Count strokes per length and try to lower it</td>
+    <td>4+ consecutive breathing cycles feel calm rather than desperate; stroke count trending down</td>
+  </tr>
+  <tr>
+    <td><strong>4. Extension</strong></td>
+    <td>50s and 75s at relaxed effort · Light lazy kick · Experiment with breathing every 3 (alternate sides) only now</td>
+    <td>You finish a 50 and feel like you could do another — the definition of efficient freestyle</td>
+  </tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="checklist">Poolside quick-reference</h2>
+
+<div class="checklist">
+  <h3>Body (fixes the legs)</h3>
+  <ul>
+    <li>Eyes down, neck long — crown of the head leads</li>
+    <li><strong>Lean on your chest</strong> — swim "downhill," hips light</li>
+    <li>Core gently braced — kayak, not banana</li>
+    <li>Toes pointed, ankles floppy, kick small and from the hip</li>
+  </ul>
+</div>
+
+<div class="checklist">
+  <h3>Breath (fixes the water-swallowing)</h3>
+  <ul>
+    <li>Trickle-exhale the <em>entire</em> time your face is down; strong puff at the end</li>
+    <li>Rotate the head with the body roll — never lift it</li>
+    <li><strong>Chin toward the shoulder, mouth ~45° back</strong> — into the trough, not at the sky</li>
+    <li>One goggle stays wet; quick sip, face straight back down</li>
+    <li>Lead arm stays extended out front while you breathe</li>
+    <li>Breathe every 2 strokes for now</li>
+  </ul>
+</div>
+
+<div class="checklist">
+  <h3>Effort (fixes the exhaustion)</h3>
+  <ul>
+    <li>Fewer, longer, patient strokes — count them per length</li>
+    <li>High, wide elbow; press water <em>backward</em> with the forearm, not downward</li>
+    <li>Downshift the kick to "lazy" once your balance holds</li>
+    <li>Short repeats, real rest, one cue at a time, stop while form is good</li>
+  </ul>
+</div>
+
+</main>
+
+<footer>
+  Built for fixing the sink → struggle → gasp → tense → sink cycle. Balance first; everything else follows.
+</footer>
+
+</body>
+</html>
